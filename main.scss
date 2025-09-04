@@ -34,18 +34,28 @@ body {
 
 
 .person {
+
+  position: relative;
   width:100%;
   padding: 10px 10px 0;
   border-radius:10px;
+  transition: transform 1s;
 
   &:hover {
     background-color: #EEEEEE;
+    transform: scale(1.2);
+    z-index: 2;
+
 
   }
 
   &:hover &__extra {
     visibility: inherit;
 
+  }
+
+  &:hover &__img {
+    border-radius: 50px;
   }
 
 
@@ -63,6 +73,7 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 100px;
+    transition: border-radius 1s;
 
   }
 
