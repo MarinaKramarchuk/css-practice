@@ -1,1 +1,108 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
 
+}
+
+.people {
+
+  &__content {
+    --column-number: 2;
+    display: grid;
+    grid-template-columns: repeat(var(--column-number), 220px);
+    column-gap: 10px;
+    justify-content: center;
+    align-content: flex-start;
+
+    padding: 20px 0 155px;
+    margin: 0;
+
+    @media (min-width: 1000px) {
+    --column-number: 4;
+    padding: 45px 0 197px;
+
+  }
+
+  }
+
+  
+}
+
+
+.person {
+  width:100%;
+  padding: 10px 10px 0;
+  border-radius:10px;
+
+
+
+  &__photo {
+    position: relative;
+
+    margin-bottom: 8px;
+
+  }
+
+  &__img {
+    display: flex;
+    margin-inline: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+
+  }
+
+  &__rank {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+
+    background-color: #FFF;
+    border-radius: 100px;
+
+    color: #8B0000;
+    font-weight: 700;
+    font-size: 16px;
+
+
+  }
+
+  &__details {
+    margin-bottom: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 20px;
+    color: #2F4F4F;
+  }
+
+  // &__extra {
+
+
+  // }
+
+  // &__sport {
+
+  // }
+
+  // &__pay {
+
+  // }
+}
