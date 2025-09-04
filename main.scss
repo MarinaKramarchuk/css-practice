@@ -24,14 +24,9 @@ body {
     @media (min-width: 1000px) {
     --column-number: 4;
     padding: 45px 0 197px;
-
   }
-
   }
-
-  
 }
-
 
 .person {
 
@@ -45,26 +40,19 @@ body {
     background-color: #EEEEEE;
     transform: scale(1.2);
     z-index: 2;
-
-
   }
 
   &:hover &__extra {
     visibility: inherit;
-
   }
 
   &:hover &__img {
     border-radius: 50px;
   }
 
-
-
   &__photo {
     position: relative;
-
     margin-bottom: 8px;
-
   }
 
   &__img {
@@ -74,7 +62,6 @@ body {
     height: 200px;
     border-radius: 100px;
     transition: border-radius 1s;
-
   }
 
   &__rank {
@@ -94,16 +81,11 @@ body {
     color: #8B0000;
     font-weight: 700;
     font-size: 16px;
-
-
   }
 
   &__details {
-
     display: flex;
     flex-direction: column;
-
-
   }
 
   &__name {
@@ -117,25 +99,16 @@ body {
     box-sizing:border-box;
     height: 30px;
     padding-top: 9px;
-
     visibility: hidden;
-
-
-
-
-
   }
 
   &__sport {
-    
     &::after {
       content:',';
     }
-
   }
 
   &__pay {
-
     &::before {
       content: '$';
     }
@@ -143,7 +116,5 @@ body {
     &::after {
       content: 'M';
     }
-
-
   }
 }
