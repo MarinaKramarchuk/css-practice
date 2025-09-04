@@ -30,6 +30,14 @@ body {
   padding: 10px 10px 0;
 }
 
+.person:hover {
+  background-color: #eee;
+}
+
+.person:hover .person__extra {
+  visibility: inherit;
+}
+
 .person__photo {
   margin-bottom: 8px;
   position: relative;
@@ -62,8 +70,6 @@ body {
 
 .person__details {
   flex-direction: column;
-  gap: 9px;
-  margin-bottom: 16px;
   display: flex;
 }
 
@@ -71,5 +77,25 @@ body {
   color: #2f4f4f;
   font-size: 20px;
   font-weight: 700;
+}
+
+.person__extra {
+  box-sizing: border-box;
+  visibility: hidden;
+  height: 30px;
+  padding-top: 9px;
+  display: block;
+}
+
+.person__sport:after {
+  content: ",";
+}
+
+.person__pay:before {
+  content: "$";
+}
+
+.person__pay:after {
+  content: "M";
 }
 /*# sourceMappingURL=css-practice.b1276d39.css.map */
