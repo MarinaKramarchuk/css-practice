@@ -7,25 +7,27 @@ body {
   font-weight: 400;
 }
 
-.people__content {
+.people {
   --column-number: 2;
   grid-template-columns: repeat(var(--column-number), 220px);
   place-content: flex-start center;
-  column-gap: 10px;
+  gap: 30px 10px;
   margin: 0;
-  padding: 20px 0 155px;
+  padding: 20px 25px;
   display: grid;
 }
 
 @media (width >= 1000px) {
-  .people__content {
+  .people {
     --column-number: 4;
-    padding: 45px 0 197px;
+    padding-inline: 45px;
   }
 }
 
 .person {
-  border-radius: 10px;
+  box-sizing: border-box;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   width: 100%;
   padding: 10px 10px 0;
   transition: transform 1s;
@@ -39,7 +41,9 @@ body {
 }
 
 .person:hover .person__extra {
-  visibility: inherit;
+  z-index: 1;
+  display: block;
+  transform: translateY(99%);
 }
 
 .person:hover .person__img {
@@ -90,10 +94,16 @@ body {
 
 .person__extra {
   box-sizing: border-box;
-  visibility: hidden;
-  height: 30px;
+  background-color: #eee;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   padding-top: 9px;
-  display: block;
+  padding-bottom: 16px;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .person__sport:after {
